@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>My Tasks</h1>
+        <p class="subtitle">Klik pada teks tugas untuk menandai selesai/belum selesai</p>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Tulis tugas baru di sini...">
+            <button id="add-btn">Add</button>
+        </div>
+        
+        <p id="error-msg" class="hidden">⚠️ Input tidak boleh kosong!</p>
+
+        <div class="filter-container">
+            <button id="filter-all" onclick="changeFilter('all')" class="btn-filter btn-active">All</button>
+            <button id="filter-active" onclick="changeFilter('active')" class="btn-filter btn-inactive">Active</button>
+            <button id="filter-completed" onclick="changeFilter('completed')" class="btn-filter btn-inactive">Completed</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
